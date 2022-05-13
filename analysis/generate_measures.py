@@ -15,10 +15,9 @@ else:
     output_dir = "output"
 
 # patient count
-patient_count_table = pd.read_csv(
-    f"{output_dir}/patient_count.csv"
-)
+patient_count_table = pd.read_csv(f"{output_dir}/patient_count.csv")
 patient_count = patient_count_table["num"][0]
+
 
 def practice_counts(counts_table, list_sizes):
     counts_table = counts_table.merge(list_sizes, on=["practice"], how="inner")

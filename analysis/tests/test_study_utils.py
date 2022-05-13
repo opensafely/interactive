@@ -183,3 +183,38 @@ def test_group_low_values(df, threshold):
     assert len(suppressed_count) <= 1
     if len(suppressed_count) == 1:
         assert suppressed_count[0] >= threshold
+
+
+@st.composite
+def random_events_table(draw):
+    total_events = draw(
+        st.one_of(st.none(), st.integers(min_value=0, max_value=1000000))
+    )
+    events_in_latest_period = draw(
+        st.one_of(st.none(), st.integers(min_value=0, max_value=1000000))
+    )
+    unique_patients = draw(
+        st.one_of(st.none(), st.integers(min_value=0, max_value=1000000))
+    )
+
+    df = pd.DataFrame(
+        {
+            "total_events": total_events,
+            "events_in_latest_period": events_in_latest_period,
+            "unique_patients": unique_patients,
+        },
+        index=["count"],
+    )
+    return df
+
+
+@given(
+    random_events_table(),
+    st.integers(min_value=1, max_value=1000),
+    st.integers(min_value=1, max_value=10),
+)
+def test_redact_events_table_hypothesis(df, threshold, rounding_base):
+    result = study_utils.redact_events_table(df.T, threshold, rounding_base)
+
+    assert list(result.columns) == list(df.T.columns)
+    assert not (result["count"] < threshold).any()
