@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 from study_utils import (
     calculate_rate,
-    round_values,
     drop_irrelevant_practices,
     redact_events_table,
 )
@@ -43,7 +42,9 @@ practice_count = pd.DataFrame(
 practice_count.T.to_csv(f"{output_dir}/practice_count.csv")
 
 
-counts_table.to_csv(f"{output_dir}/measure_counts_per_week_per_practice.csv", index=False)
+counts_table.to_csv(
+    f"{output_dir}/measure_counts_per_week_per_practice.csv", index=False
+)
 
 # count total number of events
 

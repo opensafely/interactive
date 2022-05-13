@@ -130,8 +130,9 @@ def create_top_5_code_table(
 
     # round
 
-    event_counts["num"] = event_counts["num"].apply(lambda x: round_values(x, rounding_base))
-
+    event_counts["num"] = event_counts["num"].apply(
+        lambda x: round_values(x, rounding_base)
+    )
 
     # calculate % makeup of each code
     total_events = event_counts["num"].sum()
@@ -153,7 +154,7 @@ def create_top_5_code_table(
 
     # Rename the code column to something consistent
     event_counts.rename(columns={code_column: "Code"}, inplace=True)
-    
+
     # drop events column
     event_counts = event_counts.loc[
         :, ["Code", "Description", "Proportion of codes (%)"]
@@ -181,14 +182,14 @@ def calculate_rate(df, value_col, rate_per=1000, round_rate=False):
 
     return rate
 
+
 def round_values(x, base=5):
     if not np.isnan(x):
-        rounded = int(base * round(x/base))
+        rounded = int(base * round(x / base))
     else:
         rounded = np.nan
-    return  rounded
+    return rounded
 
- 
 
 def compute_deciles(measure_table, groupby_col, values_col, has_outer_percentiles=True):
     """Computes deciles.
@@ -224,6 +225,7 @@ def get_practice_deciles(measure_table, value_column):
 
     return measure_table
 
+
 def drop_irrelevant_practices(df):
     """Drops irrelevant practices from the given measure table.
     An irrelevant practice has zero events during the study period.
@@ -234,6 +236,7 @@ def drop_irrelevant_practices(df):
     """
     is_relevant = df.groupby("practice").value.any()
     return df[df.practice.isin(is_relevant[is_relevant == True].index)]
+
 
 def compute_redact_deciles(df, period_column, count_column, column):
     n_practices = df.groupby(by=["date"])[["practice"]].nunique()
@@ -260,14 +263,14 @@ def compute_redact_deciles(df, period_column, count_column, column):
 
     return df
 
+
 def redact_events_table(events_counts, low_count_threshold, rounding_base):
     # redact low counts
     events_counts[events_counts <= low_count_threshold] = f"<={low_count_threshold}"
-
 
     # round
     events_counts["count"] = events_counts["count"].apply(
         lambda x: round_values(x, base=rounding_base)
     )
-    
+
     return events_counts
