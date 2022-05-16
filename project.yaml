@@ -6,44 +6,46 @@ expectations:
 
 actions:
 
-  codelist_report_02pr4HRGKeM1YxyTixU4x5:
+  codelist_report_02pr4OiiBdPIP6UiiWFhMB:
     run: >
       cohortextractor:latest generate_codelist_report
         --codelist-path=codelist.csv
         --start-date=2020-01-01
         --end-date=2021-12-31
-        --output-dir output/02pr4HRGKeM1YxyTixU4x5
+        --output-dir output/02pr4OiiBdPIP6UiiWFhMB
     outputs:
       moderately_sensitive:
-        table: output/02pr4HRGKeM1YxyTixU4x5/counts_per_*.csv
-        list_sizes: output/02pr4HRGKeM1YxyTixU4x5/list_sizes.csv
+        table: output/02pr4OiiBdPIP6UiiWFhMB/counts_per_*.csv
+        list_sizes: output/02pr4OiiBdPIP6UiiWFhMB/list_sizes.csv
 
-  measures_02pr4HRGKeM1YxyTixU4x5:
-    run: python:latest python analysis/generate_measures.py output/02pr4HRGKeM1YxyTixU4x5
-    needs: [codelist_report_02pr4HRGKeM1YxyTixU4x5]
+  measures_02pr4OiiBdPIP6UiiWFhMB:
+    run: python:latest python analysis/generate_measures.py output/02pr4OiiBdPIP6UiiWFhMB
+    needs: [codelist_report_02pr4OiiBdPIP6UiiWFhMB]
     outputs:
       moderately_sensitive:
-        measure: output/02pr4HRGKeM1YxyTixU4x5/measure_counts_per_week_per_practice.csv
+        measure: output/02pr4OiiBdPIP6UiiWFhMB/measure_counts_per_week_per_practice.csv
+        events_count_table: output/02pr4OiiBdPIP6UiiWFhMB/event_counts.csv
+        practice_count_table: output/02pr4OiiBdPIP6UiiWFhMB/practice_count.csv
 
-  top_5_table_02pr4HRGKeM1YxyTixU4x5:
-    run: python:latest python analysis/top_codes_table.py output/02pr4HRGKeM1YxyTixU4x5
-    needs: [codelist_report_02pr4HRGKeM1YxyTixU4x5]
+  top_5_table_02pr4OiiBdPIP6UiiWFhMB:
+    run: python:latest python analysis/top_codes_table.py output/02pr4OiiBdPIP6UiiWFhMB
+    needs: [codelist_report_02pr4OiiBdPIP6UiiWFhMB]
     outputs:
       moderately_sensitive:
-        table: output/02pr4HRGKeM1YxyTixU4x5/top_5_code_table.csv
+        table: output/02pr4OiiBdPIP6UiiWFhMB/top_5_code_table.csv
 
-  deciles_charts_02pr4HRGKeM1YxyTixU4x5:
+  deciles_charts_02pr4OiiBdPIP6UiiWFhMB:
     run: >
       deciles-charts:v0.0.24
-        --input-files output/02pr4HRGKeM1YxyTixU4x5/measure_counts_per_week_per_practice.csv
-        --output-dir output/02pr4HRGKeM1YxyTixU4x5
+        --input-files output/02pr4OiiBdPIP6UiiWFhMB/measure_counts_per_week_per_practice.csv
+        --output-dir output/02pr4OiiBdPIP6UiiWFhMB
     config:
       show_outer_percentiles: false
       tables:
         output: true
       charts:
         output: true
-    needs: [measures_02pr4HRGKeM1YxyTixU4x5]
+    needs: [measures_02pr4OiiBdPIP6UiiWFhMB]
     outputs:
       moderately_sensitive:
-        deciles_charts: output/02pr4HRGKeM1YxyTixU4x5/deciles_*.*
+        deciles_charts: output/02pr4OiiBdPIP6UiiWFhMB/deciles_*.*
