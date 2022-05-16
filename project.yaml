@@ -6,44 +6,44 @@ expectations:
 
 actions:
 
-  generate_codelist_report:
+  codelist_report_02pr2GKDbZ9OzeG2f0Wxbi:
     run: >
       cohortextractor:latest generate_codelist_report
         --codelist-path=codelist.csv
         --start-date=2020-01-01
         --end-date=2021-12-31
-        --output-dir output/02pqxlZsPHiPqzdibwwkAn
+        --output-dir output/02pr2GKDbZ9OzeG2f0Wxbi
     outputs:
       moderately_sensitive:
-        table: output/*/counts_per_*.csv
-        list_sizes: output/*/list_sizes.csv
+        table: output/02pr2GKDbZ9OzeG2f0Wxbi/counts_per_*.csv
+        list_sizes: output/02pr2GKDbZ9OzeG2f0Wxbi/list_sizes.csv
 
-  generate_measures:
-    run: python:latest python analysis/generate_measures.py output/02pqxlZsPHiPqzdibwwkAn
-    needs: [generate_codelist_report]
+  measures_02pr2GKDbZ9OzeG2f0Wxbi:
+    run: python:latest python analysis/generate_measures.py output/02pr2GKDbZ9OzeG2f0Wxbi
+    needs: [codelist_report_02pr2GKDbZ9OzeG2f0Wxbi]
     outputs:
       moderately_sensitive:
-        measure: output/*/measure_counts_per_week_per_practice.csv
+        measure: output/02pr2GKDbZ9OzeG2f0Wxbi/measure_counts_per_week_per_practice.csv
 
-  generate_top_5_table:
-    run: python:latest python analysis/top_codes_table.py output/02pqxlZsPHiPqzdibwwkAn
-    needs: [generate_codelist_report]
+  top_5_table_02pr2GKDbZ9OzeG2f0Wxbi:
+    run: python:latest python analysis/top_codes_table.py output/02pr2GKDbZ9OzeG2f0Wxbi
+    needs: [codelist_report_02pr2GKDbZ9OzeG2f0Wxbi]
     outputs:
       moderately_sensitive:
-        table: output/*/top_5_code_table.csv
+        table: output/02pr2GKDbZ9OzeG2f0Wxbi/top_5_code_table.csv
 
-  generate_deciles_charts:
+  deciles_charts_02pr2GKDbZ9OzeG2f0Wxbi:
     run: >
       deciles-charts:v0.0.24
-        --input-files output/02pqxlZsPHiPqzdibwwkAn/measure_counts_per_week_per_practice.csv
-        --output-dir output/02pqxlZsPHiPqzdibwwkAn
+        --input-files output/02pr2GKDbZ9OzeG2f0Wxbi/measure_counts_per_week_per_practice.csv
+        --output-dir output/02pr2GKDbZ9OzeG2f0Wxbi
     config:
       show_outer_percentiles: false
       tables:
         output: true
       charts:
         output: true
-    needs: [generate_measures]
+    needs: [measures_02pr2GKDbZ9OzeG2f0Wxbi]
     outputs:
       moderately_sensitive:
-        deciles_charts: output/*/deciles_*_*.*
+        deciles_charts: output/02pr2GKDbZ9OzeG2f0Wxbi/deciles_*.*
