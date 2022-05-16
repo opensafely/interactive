@@ -12,21 +12,21 @@ actions:
         --codelist-path=codelist.csv
         --start-date=2020-01-01
         --end-date=2021-12-31
-        --output-dir output/02ppJyyv4TOvzqU6kfGLML
+        --output-dir output/02pqxlZsPHiPqzdibwwkAn
     outputs:
       moderately_sensitive:
         table: output/*/counts_per_*.csv
         list_sizes: output/*/list_sizes.csv
 
   generate_measures:
-    run: python:latest python analysis/generate_measures.py output/02ppJyyv4TOvzqU6kfGLML
+    run: python:latest python analysis/generate_measures.py output/02pqxlZsPHiPqzdibwwkAn
     needs: [generate_codelist_report]
     outputs:
       moderately_sensitive:
         measure: output/*/measure_counts_per_week_per_practice.csv
 
   generate_top_5_table:
-    run: python:latest python analysis/top_codes_table.py output/02ppJyyv4TOvzqU6kfGLML
+    run: python:latest python analysis/top_codes_table.py output/02pqxlZsPHiPqzdibwwkAn
     needs: [generate_codelist_report]
     outputs:
       moderately_sensitive:
@@ -34,9 +34,9 @@ actions:
 
   generate_deciles_charts:
     run: >
-      deciles-charts:v0.0.15
+      deciles-charts:v0.0.24
         --input-files output/measure_counts_per_week_per_practice.csv
-        --output-dir output/02ppJyyv4TOvzqU6kfGLML
+        --output-dir output/02pqxlZsPHiPqzdibwwkAn
     config:
       show_outer_percentiles: false
       tables:
