@@ -24,6 +24,8 @@ actions:
     outputs:
       moderately_sensitive:
         measure: output/02pr2GKDbZ9OzeG2f0Wxbi/measure_counts_per_week_per_practice.csv
+        events_count_table: output/02pr2GKDbZ9OzeG2f0Wxbi/event_counts.csv
+        practice_count_table: output/02pr2GKDbZ9OzeG2f0Wxbi/practice_count.csv
 
   top_5_table_02pr2GKDbZ9OzeG2f0Wxbi:
     run: python:latest python analysis/top_codes_table.py output/02pr2GKDbZ9OzeG2f0Wxbi
