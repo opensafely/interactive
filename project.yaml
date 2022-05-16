@@ -35,7 +35,7 @@ actions:
   generate_deciles_charts:
     run: >
       deciles-charts:v0.0.24
-        --input-files output/measure_counts_per_week_per_practice.csv
+        --input-files output/02pqxlZsPHiPqzdibwwkAn/measure_counts_per_week_per_practice.csv
         --output-dir output/02pqxlZsPHiPqzdibwwkAn
     config:
       show_outer_percentiles: false
