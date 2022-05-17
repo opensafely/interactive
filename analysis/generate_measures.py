@@ -15,6 +15,11 @@ if len(sys.argv) > 1:
 else:
     output_dir = "output"
 
+# patient count
+patient_count_table = pd.read_csv(
+    f"{output_dir}/patient_count.csv", parse_dates=["date"]
+)
+patient_count = patient_count_table["num"][0]
 
 counts_table = pd.read_csv(
     f"{output_dir}/counts_per_week_per_practice.csv", parse_dates=["date"]
@@ -55,7 +60,7 @@ events_counts = pd.DataFrame(
     {
         "total_events": total_events,
         "events_in_latest_period": events_in_latest_period,
-        "unique_patients": np.nan,
+        "unique_patients": patient_count,
     },
     index=["count"],
 )
