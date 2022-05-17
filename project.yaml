@@ -17,6 +17,7 @@ actions:
       moderately_sensitive:
         table: output/02pr4OiiBdPIP6UiiWFhMB/counts_per_*.csv
         list_sizes: output/02pr4OiiBdPIP6UiiWFhMB/list_sizes.csv
+        patient_count_table: output/02pr4OiiBdPIP6UiiWFhMB/patient_count.csv
 
   measures_02pr4OiiBdPIP6UiiWFhMB:
     run: python:latest python analysis/generate_measures.py output/02pr4OiiBdPIP6UiiWFhMB
@@ -26,6 +27,7 @@ actions:
         measure: output/02pr4OiiBdPIP6UiiWFhMB/measure_counts_per_week_per_practice.csv
         events_count_table: output/02pr4OiiBdPIP6UiiWFhMB/event_counts.csv
         practice_count_table: output/02pr4OiiBdPIP6UiiWFhMB/practice_count.csv
+        
 
   top_5_table_02pr4OiiBdPIP6UiiWFhMB:
     run: python:latest python analysis/top_codes_table.py output/02pr4OiiBdPIP6UiiWFhMB
