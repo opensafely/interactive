@@ -6,47 +6,47 @@ expectations:
 
 actions:
 
-  codelist_report_02prdgRgt6vsjmVhh9Jvug:
+  codelist_report_02ps3DN1CCf5Hf1EmUBWga:
     run: >
       cohortextractor:latest generate_codelist_report
         --codelist-path=codelist.csv
         --start-date=2020-01-01
         --end-date=2021-12-31
-        --output-dir output/02prdgRgt6vsjmVhh9Jvug
+        --output-dir output/02ps3DN1CCf5Hf1EmUBWga
     outputs:
       moderately_sensitive:
-        table: output/02prdgRgt6vsjmVhh9Jvug/counts_per_*.csv
-        list_sizes: output/02prdgRgt6vsjmVhh9Jvug/list_sizes.csv
-        patient_count_table: output/02prdgRgt6vsjmVhh9Jvug/patient_count.csv
+        table: output/02ps3DN1CCf5Hf1EmUBWga/counts_per_*.csv
+        list_sizes: output/02ps3DN1CCf5Hf1EmUBWga/list_sizes.csv
+        patient_count_table: output/02ps3DN1CCf5Hf1EmUBWga/patient_count.csv
 
-  measures_02prdgRgt6vsjmVhh9Jvug:
-    run: python:latest python analysis/generate_measures.py output/02prdgRgt6vsjmVhh9Jvug
-    needs: [codelist_report_02prdgRgt6vsjmVhh9Jvug]
+  measures_02ps3DN1CCf5Hf1EmUBWga:
+    run: python:latest python analysis/generate_measures.py output/02ps3DN1CCf5Hf1EmUBWga
+    needs: [codelist_report_02ps3DN1CCf5Hf1EmUBWga]
     outputs:
       moderately_sensitive:
-        measure: output/02prdgRgt6vsjmVhh9Jvug/measure_counts_per_week_per_practice.csv
-        events_count_table: output/02prdgRgt6vsjmVhh9Jvug/event_counts.csv
-        practice_count_table: output/02prdgRgt6vsjmVhh9Jvug/practice_count.csv
+        measure: output/02ps3DN1CCf5Hf1EmUBWga/measure_counts_per_week_per_practice.csv
+        events_count_table: output/02ps3DN1CCf5Hf1EmUBWga/event_counts.csv
+        practice_count_table: output/02ps3DN1CCf5Hf1EmUBWga/practice_count.csv
 
-  top_5_table_02prdgRgt6vsjmVhh9Jvug:
-    run: python:latest python analysis/top_codes_table.py output/02prdgRgt6vsjmVhh9Jvug
-    needs: [codelist_report_02prdgRgt6vsjmVhh9Jvug]
+  top_5_table_02ps3DN1CCf5Hf1EmUBWga:
+    run: python:latest python analysis/top_codes_table.py output/02ps3DN1CCf5Hf1EmUBWga
+    needs: [codelist_report_02ps3DN1CCf5Hf1EmUBWga]
     outputs:
       moderately_sensitive:
-        table: output/02prdgRgt6vsjmVhh9Jvug/top_5_code_table.csv
+        table: output/02ps3DN1CCf5Hf1EmUBWga/top_5_code_table.csv
 
-  deciles_charts_02prdgRgt6vsjmVhh9Jvug:
+  deciles_charts_02ps3DN1CCf5Hf1EmUBWga:
     run: >
       deciles-charts:v0.0.24
-        --input-files output/02prdgRgt6vsjmVhh9Jvug/measure_counts_per_week_per_practice.csv
-        --output-dir output/02prdgRgt6vsjmVhh9Jvug
+        --input-files output/02ps3DN1CCf5Hf1EmUBWga/measure_counts_per_week_per_practice.csv
+        --output-dir output/02ps3DN1CCf5Hf1EmUBWga
     config:
       show_outer_percentiles: false
       tables:
         output: true
       charts:
         output: true
-    needs: [measures_02prdgRgt6vsjmVhh9Jvug]
+    needs: [measures_02ps3DN1CCf5Hf1EmUBWga]
     outputs:
       moderately_sensitive:
-        deciles_charts: output/02prdgRgt6vsjmVhh9Jvug/deciles_*.*
+        deciles_charts: output/02ps3DN1CCf5Hf1EmUBWga/deciles_*.*
