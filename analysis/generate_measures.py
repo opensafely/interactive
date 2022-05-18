@@ -17,7 +17,7 @@ else:
 
 # patient count
 patient_count_table = pd.read_csv(
-    f"{output_dir}/patient_count.csv", parse_dates=["date"]
+    f"{output_dir}/patient_count.csv"
 )
 patient_count = patient_count_table["num"][0]
 
