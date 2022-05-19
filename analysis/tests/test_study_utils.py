@@ -158,7 +158,7 @@ def distinct_strings_with_common_characters(draw):
     count_column = draw(
         st.lists(st.one_of(st.none(), st.integers(min_value=0, max_value=1000000)))
     )
-    code_column = draw(st.lists(st.text(min_size=1)))
+    code_column = draw(st.lists(st.text(min_size=1), unique=True))
     assume(len(count_column) == len(code_column))
 
     count_column_name = draw(st.text(min_size=1))
@@ -171,7 +171,7 @@ def distinct_strings_with_common_characters(draw):
 
 
 @given(
-    distinct_strings_with_common_characters(), st.integers(min_value=0, max_value=10)
+    distinct_strings_with_common_characters(), st.integers(min_value=1, max_value=10)
 )
 def test_group_low_values(df, threshold):
     count_column, code_column = df.columns
