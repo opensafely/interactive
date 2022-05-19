@@ -216,6 +216,11 @@ def redact_events_table(events_counts, low_count_threshold, rounding_base):
 
 
 def convert_weekly_to_monthly(counts_table):
+    """ Converts a counts table of practice-level weekly counts to counts aggregated 
+    every 4 weeks. Where the number of weeks is not divisible by 4, the earliest weeks 
+    are dropped to ensure number of weeks is a multiple of 4.
+    """
+    
     dates = counts_table["date"].sort_values(ascending=True).unique()
 
     # drop earliest weeks if number of weeks not a multiple of 4.
