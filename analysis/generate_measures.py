@@ -6,6 +6,7 @@ from study_utils import (
     calculate_rate,
     drop_irrelevant_practices,
     redact_events_table,
+    convert_weekly_to_monthly
 )
 from variables import low_count_threshold, rounding_base
 
@@ -25,18 +26,7 @@ def practice_counts(counts_table, list_sizes):
     dates = counts_table["date"].sort_values(ascending=True).unique()
 
     if len(dates) >52:
-        # create 4 weekly date
-        dates_map = {}
-        for i in range(0, len(dates), 4):
-            date_group = dates[i : i + 4]
-            for date in date_group:
-                dates_map[date] = date_group[0]
-        counts_table["date"] = counts_table["date"].map(dates_map)
-
-        # group into 4 weeks
-        counts_table = (
-            counts_table.groupby(by=["practice", "date"])[["num"]].sum().reset_index()
-        )
+        counts_table = convert_weekly_to_monthly(counts_table)
 
     counts_table = counts_table.merge(list_sizes, on=["practice"], how="inner")
 

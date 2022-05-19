@@ -213,3 +213,20 @@ def redact_events_table(events_counts, low_count_threshold, rounding_base):
     )
 
     return events_counts
+
+def convert_weekly_to_monthly(counts_table):
+    
+    # create 4 weekly date
+    dates_map = {}
+    for i in range(0, len(dates), 4):
+        date_group = dates[i : i + 4]
+        for date in date_group:
+            dates_map[date] = date_group[0]
+    counts_table["date"] = counts_table["date"].map(dates_map)
+
+    # group into 4 weeks
+    counts_table = (
+        counts_table.groupby(by=["practice", "date"])[["num"]].sum().reset_index()
+    )
+
+    return counts_table
