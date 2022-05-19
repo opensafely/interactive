@@ -20,7 +20,23 @@ patient_count = patient_count_table["num"][0]
 
 
 def practice_counts(counts_table, list_sizes):
+
+    # create 4 weekly date
+    dates = counts_table["date"].sort_values(ascending=True)
+    dates_map = {}
+    for i in range(0, len(dates), 4):
+        date_group = dates[i : i + 4]
+        for date in date_group:
+            dates_map[date] = date_group[0]
+    counts_table["date"] = counts_table["date"].map(dates_map)
+
+    # group into 4 weeks
+    counts_table = (
+        counts_table.groupby(by=["practice", "date"])[["num"]].sum().reset_index()
+    )
+
     counts_table = counts_table.merge(list_sizes, on=["practice"], how="inner")
+
     counts_table["value"] = counts_table["num"] / counts_table["list_size"]
     counts_table["value"] = calculate_rate(counts_table, "value", round_rate=True)
 
