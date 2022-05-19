@@ -216,9 +216,18 @@ def redact_events_table(events_counts, low_count_threshold, rounding_base):
 
 
 def convert_weekly_to_monthly(counts_table):
-
     dates = counts_table["date"].sort_values(ascending=True).unique()
 
+    # drop earliest weeks if number of weeks not a multiple of 4.
+    num_dates = len(dates)
+    num_dates_over = num_dates % 4
+    if num_dates_over != 0:
+        # drop rows from counts table
+        counts_table = counts_table[~counts_table["date"].isin(dates[0:num_dates_over])]
+        
+        #drop dates from dates list
+        dates = dates[num_dates_over:]
+    
     # create 4 weekly date
     dates_map = {}
     for i in range(0, len(dates), 4):
@@ -233,5 +242,5 @@ def convert_weekly_to_monthly(counts_table):
         .sort_values(by=["date"])
         .reset_index(drop=True)
     )
-
+    
     return counts_table
