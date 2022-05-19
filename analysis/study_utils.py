@@ -214,8 +214,11 @@ def redact_events_table(events_counts, low_count_threshold, rounding_base):
 
     return events_counts
 
+
 def convert_weekly_to_monthly(counts_table):
-    
+
+    dates = counts_table["date"].sort_values(ascending=True).unique()
+
     # create 4 weekly date
     dates_map = {}
     for i in range(0, len(dates), 4):
@@ -226,7 +229,9 @@ def convert_weekly_to_monthly(counts_table):
 
     # group into 4 weeks
     counts_table = (
-        counts_table.groupby(by=["practice", "date"])[["num"]].sum().reset_index()
+        (counts_table.groupby(by=["practice", "date"])[["num"]].sum().reset_index())
+        .sort_values(by=["date"])
+        .reset_index(drop=True)
     )
 
     return counts_table
