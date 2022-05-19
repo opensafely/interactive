@@ -23,7 +23,7 @@ patient_count = patient_count_table["num"][0]
 def practice_counts(counts_table, list_sizes):
     # get number of weeks. If >52, convert to monthly
     
-    dates = counts_table["date"].sort_values(ascending=True).unique()
+    dates = counts_table["date"].unique()
 
     if len(dates) >52:
         counts_table = convert_weekly_to_monthly(counts_table)
