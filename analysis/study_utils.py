@@ -191,18 +191,6 @@ def round_values(x, base=5):
     return rounded
 
 
-def drop_irrelevant_practices(df):
-    """Drops irrelevant practices from the given measure table.
-    An irrelevant practice has zero events during the study period.
-    Args:
-        df: A measure table.
-    Returns:
-        A copy of the given measure table with irrelevant practices dropped.
-    """
-    is_relevant = df.groupby("practice").value.any()
-    return df[df.practice.isin(is_relevant[is_relevant == True].index)]
-
-
 def redact_events_table(events_counts, low_count_threshold, rounding_base):
     # redact low counts
     events_counts[events_counts <= low_count_threshold] = f"<={low_count_threshold}"
@@ -216,11 +204,11 @@ def redact_events_table(events_counts, low_count_threshold, rounding_base):
 
 
 def convert_weekly_to_monthly(counts_table):
-    """ Converts a counts table of practice-level weekly counts to counts aggregated 
-    every 4 weeks. Where the number of weeks is not divisible by 4, the earliest weeks 
+    """Converts a counts table of practice-level weekly counts to counts aggregated
+    every 4 weeks. Where the number of weeks is not divisible by 4, the earliest weeks
     are dropped to ensure number of weeks is a multiple of 4.
     """
-    
+
     dates = counts_table["date"].sort_values(ascending=True).unique()
 
     # drop earliest weeks if number of weeks not a multiple of 4.
@@ -229,10 +217,10 @@ def convert_weekly_to_monthly(counts_table):
     if num_dates_over != 0:
         # drop rows from counts table
         counts_table = counts_table[~counts_table["date"].isin(dates[0:num_dates_over])]
-        
-        #drop dates from dates list
+
+        # drop dates from dates list
         dates = dates[num_dates_over:]
-    
+
     # create 4 weekly date
     dates_map = {}
     for i in range(0, len(dates), 4):
@@ -247,5 +235,5 @@ def convert_weekly_to_monthly(counts_table):
         .sort_values(by=["date"])
         .reset_index(drop=True)
     )
-    
+
     return counts_table

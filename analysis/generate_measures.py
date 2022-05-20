@@ -29,14 +29,13 @@ def practice_counts(counts_table, list_sizes):
     counts_table["value"] = counts_table["num"] / counts_table["list_size"]
     counts_table["value"] = calculate_rate(counts_table, "value", round_rate=True)
 
-    practice_count_total = len(np.unique(counts_table["practice"]))
-    # drop practices with no events for entire period
-    counts_table = drop_irrelevant_practices(counts_table)
-
-    practice_count_subset = len(np.unique(counts_table["practice"]))
+    practice_count_with_events = len(np.unique(counts_table["practice"]))
 
     practice_count = pd.DataFrame(
-        {"total": practice_count_total, "with_at_least_1_event": practice_count_subset},
+        {
+            "total": practice_count_total,
+            "with_at_least_1_event": practice_count_with_events,
+        },
         index=["count"],
     )
 
