@@ -6,8 +6,9 @@ from study_utils import (
     calculate_rate,
     redact_events_table,
     convert_weekly_to_monthly,
+    round_values,
 )
-from variables import low_count_threshold, rounding_base
+from variables import low_count_threshold, rounding_base, rounding_base_practice_count
 
 if len(sys.argv) > 1:
     output_dir = sys.argv[1]
@@ -38,6 +39,13 @@ def practice_counts(counts_table, list_sizes):
         },
         index=["count"],
     )
+
+    # round
+    for column in practice_count.columns:
+
+        practice_count[column] = practice_count[column].apply(
+            lambda x: round_values(x, base=rounding_base_practice_count)
+        )
 
     return practice_count, counts_table
 
