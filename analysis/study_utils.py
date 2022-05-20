@@ -216,7 +216,7 @@ def convert_weekly_to_monthly(counts_table):
     num_dates_over = num_dates % 4
     if num_dates_over != 0:
         # drop rows from counts table
-        counts_table = counts_table[~counts_table["date"].isin(dates[0:num_dates_over])]
+        counts_table = counts_table.loc[~counts_table["date"].isin(dates[0:num_dates_over]), counts_table.columns]
 
         # drop dates from dates list
         dates = dates[num_dates_over:]
@@ -227,7 +227,7 @@ def convert_weekly_to_monthly(counts_table):
         date_group = dates[i : i + 4]
         for date in date_group:
             dates_map[date] = date_group[0]
-    counts_table["date"] = counts_table["date"].map(dates_map)
+    counts_table.loc[counts_table.index,"date"] = counts_table.loc[counts_table.index,"date"].map(dates_map)
 
     # group into 4 weeks
     counts_table = (
