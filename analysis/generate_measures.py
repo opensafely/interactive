@@ -6,7 +6,7 @@ from study_utils import (
     calculate_rate,
     drop_irrelevant_practices,
     redact_events_table,
-    convert_weekly_to_monthly
+    convert_weekly_to_monthly,
 )
 from variables import low_count_threshold, rounding_base
 
@@ -15,17 +15,13 @@ if len(sys.argv) > 1:
 else:
     output_dir = "output"
 
-# patient count
-patient_count_table = pd.read_csv(f"{output_dir}/patient_count.csv")
-patient_count = patient_count_table["num"][0]
-
 
 def practice_counts(counts_table, list_sizes):
     # get number of weeks. If >52, convert to monthly
-    
+
     dates = counts_table["date"].unique()
 
-    if len(dates) >52:
+    if len(dates) > 52:
         counts_table = convert_weekly_to_monthly(counts_table)
 
     counts_table = counts_table.merge(list_sizes, on=["practice"], how="inner")
@@ -47,7 +43,7 @@ def practice_counts(counts_table, list_sizes):
     return practice_count, counts_table
 
 
-def total_events_counts(counts_table):
+def total_events_counts(counts_table, patient_count):
     # count total number of events
     total_events = int(counts_table["num"].sum())
 
@@ -61,7 +57,7 @@ def total_events_counts(counts_table):
         {
             "total_events": total_events,
             "events_in_latest_period": events_in_latest_period,
-            "unique_patients": np.nan,
+            "unique_patients": patient_count,
         },
         index=["count"],
     )
@@ -71,13 +67,17 @@ def total_events_counts(counts_table):
 
 
 def main():
+
+    patient_count_table = pd.read_csv(f"{output_dir}/patient_count.csv")
+    patient_count = patient_count_table["num"][0]
+
     counts_table = pd.read_csv(
         f"{output_dir}/counts_per_week_per_practice.csv", parse_dates=["date"]
     )
     list_sizes = pd.read_csv(f"{output_dir}/list_sizes.csv")
 
     practice_count, counts_table = practice_counts(counts_table, list_sizes)
-    events_counts = total_events_counts(counts_table)
+    events_counts = total_events_counts(counts_table, patient_count)
 
     practice_count.T.to_csv(f"{output_dir}/practice_count.csv")
     counts_table.to_csv(
