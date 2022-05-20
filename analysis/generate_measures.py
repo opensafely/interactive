@@ -29,6 +29,7 @@ def practice_counts(counts_table, list_sizes):
     counts_table["value"] = counts_table["num"] / counts_table["list_size"]
     counts_table["value"] = calculate_rate(counts_table, "value", round_rate=True)
 
+    practice_count_total = len(np.unique(list_sizes["practice"]))
     practice_count_with_events = len(np.unique(counts_table["practice"]))
 
     practice_count = pd.DataFrame(
