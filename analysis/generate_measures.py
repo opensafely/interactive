@@ -6,6 +6,7 @@ from study_utils import (
     calculate_rate,
     drop_irrelevant_practices,
     redact_events_table,
+    convert_weekly_to_monthly
 )
 from variables import low_count_threshold, rounding_base
 
@@ -20,7 +21,15 @@ patient_count = patient_count_table["num"][0]
 
 
 def practice_counts(counts_table, list_sizes):
+    # get number of weeks. If >52, convert to monthly
+    
+    dates = counts_table["date"].unique()
+
+    if len(dates) >52:
+        counts_table = convert_weekly_to_monthly(counts_table)
+
     counts_table = counts_table.merge(list_sizes, on=["practice"], how="inner")
+
     counts_table["value"] = counts_table["num"] / counts_table["list_size"]
     counts_table["value"] = calculate_rate(counts_table, "value", round_rate=True)
 

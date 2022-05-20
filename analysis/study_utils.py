@@ -213,3 +213,39 @@ def redact_events_table(events_counts, low_count_threshold, rounding_base):
     )
 
     return events_counts
+
+
+def convert_weekly_to_monthly(counts_table):
+    """ Converts a counts table of practice-level weekly counts to counts aggregated 
+    every 4 weeks. Where the number of weeks is not divisible by 4, the earliest weeks 
+    are dropped to ensure number of weeks is a multiple of 4.
+    """
+    
+    dates = counts_table["date"].sort_values(ascending=True).unique()
+
+    # drop earliest weeks if number of weeks not a multiple of 4.
+    num_dates = len(dates)
+    num_dates_over = num_dates % 4
+    if num_dates_over != 0:
+        # drop rows from counts table
+        counts_table = counts_table[~counts_table["date"].isin(dates[0:num_dates_over])]
+        
+        #drop dates from dates list
+        dates = dates[num_dates_over:]
+    
+    # create 4 weekly date
+    dates_map = {}
+    for i in range(0, len(dates), 4):
+        date_group = dates[i : i + 4]
+        for date in date_group:
+            dates_map[date] = date_group[0]
+    counts_table["date"] = counts_table["date"].map(dates_map)
+
+    # group into 4 weeks
+    counts_table = (
+        (counts_table.groupby(by=["practice", "date"])[["num"]].sum().reset_index())
+        .sort_values(by=["date"])
+        .reset_index(drop=True)
+    )
+    
+    return counts_table

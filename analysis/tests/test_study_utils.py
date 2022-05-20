@@ -6,6 +6,43 @@ import study_utils
 from hypothesis import strategies as st
 from hypothesis import assume, given
 
+@pytest.fixture()
+def counts_table():
+    """Returns a weekly counts table as produced by the codelist report action."""
+    return pd.DataFrame(
+        {   
+            "practice": pd.Series([1, 2, 1, 2, 1, 2, 1, 2, 1, 2]),
+            "date": pd.Series([
+                    "2019-01-01", 
+                    "2019-01-01",
+                    "2019-01-08", 
+                    "2019-01-08",
+                    "2019-01-15", 
+                    "2019-01-15",
+                    "2019-01-22", 
+                    "2019-01-22",
+                    "2019-01-29", 
+                    "2019-01-29",
+                    ]
+            ),
+            "num": pd.Series([3, 10, 1, 0, 4, 2, 5, 4, 8, 10])
+        }
+    )
+
+def test_convert_weekly_to_monthly(counts_table):
+    obs = study_utils.convert_weekly_to_monthly(counts_table)
+    exp = pd.DataFrame(
+        {   
+            "practice": pd.Series([1, 2]),
+            "date": pd.Series([
+                    "2019-01-08", 
+                    "2019-01-08",
+                    ]
+            ),
+            "num": pd.Series([18, 16])
+        }
+    )
+    testing.assert_frame_equal(obs, exp)
 
 @pytest.fixture()
 def measure_table():
