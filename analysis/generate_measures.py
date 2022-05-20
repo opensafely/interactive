@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 from study_utils import (
     calculate_rate,
-    drop_irrelevant_practices,
     redact_events_table,
     convert_weekly_to_monthly,
 )
