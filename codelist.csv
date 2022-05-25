@@ -1,19 +1,11 @@
 code,term
-14336007,Ruptured abdominal aortic aneurysm
-195265003,"Thoracoabdominal aortic aneurysm, ruptured"
-195268001,Leaking abdominal aortic aneurysm
-233984007,Thoracoabdominal aortic aneurysm
-233985008,Abdominal aortic aneurysm
-314184006,Ruptured suprarenal aortic aneurysm
-314185007,Juxtarenal aortic aneurysm
-314186008,Inflammatory abdominal aortic aneurysm
-315295003,Recurrent abdominal aortic aneurysm
-425771001,Enlarging abdominal aortic aneurysm
-426270006,Aneurysm of suprarenal aorta
-444569004,Aneurysm of infrarenal abdominal aorta
-715364001,Familial abdominal aortic aneurysm
-735576008,Perforation of abdominal aorta co-occurrent and due to aneurysm of abdominal aorta
-735577004,Perforation of thoracoabdominal aorta co-occurrent and due to aneurysm of thoracoabdominal aorta
-75878002,Abdominal aortic aneurysm without rupture
-771453009,Repair of abdominal aortic aneurysm with insertion of stent
-871536000,Aneurysm of pararenal aorta
+270442000,Asthma monitoring check done
+390872009,Change in asthma management plan
+390877003,Step up change in asthma management plan
+390878008,Step down change in asthma management plan
+394700004,Asthma annual review
+394701000,Asthma follow-up
+394720003,Asthma medication review
+401182001,Asthma monitoring by nurse
+401183006,Asthma monitoring by doctor
+754061000000100,Asthma review using Royal College of Physicians three questions
