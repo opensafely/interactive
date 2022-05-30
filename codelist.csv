@@ -1,11 +1,14 @@
 code,term
-270442000,Asthma monitoring check done
-390872009,Change in asthma management plan
-390877003,Step up change in asthma management plan
-390878008,Step down change in asthma management plan
-394700004,Asthma annual review
-394701000,Asthma follow-up
-394720003,Asthma medication review
-401182001,Asthma monitoring by nurse
-401183006,Asthma monitoring by doctor
-754061000000100,Asthma review using Royal College of Physicians three questions
+1013211000000103,Plasma alanine aminotransferase level
+1018251000000107,Serum alanine aminotransferase level
+104481004,"Alanine aminotransferase measurement, method with pyridoxal-5'-phosphate"
+104482006,"Alanine aminotransferase measurement, method without pyridoxal-5'-phosphate"
+201321000000108,Serum alanine aminotransferase level
+219651000000107,Serum alanine aminotransferase level
+219661000000105,Serum alanine aminotransferase level
+250637003,Alanine aminotransferase - blood measurement
+34608000,Alanine aminotransferase measurement
+389586005,Plasma alanine aminotransferase level
+390318006,Plasma alanine aminotransferase level
+390961000,Plasma alanine aminotransferase level
+889391000000100,Measurement of alanine transaminase activity
