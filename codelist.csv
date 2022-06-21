@@ -1,20 +1,3 @@
 code,term
-1037311000000106,First intranasal seasonal influenza vaccination given by pharmacist
-1037331000000103,Second intranasal seasonal influenza vaccination given by pharmacist
-1037351000000105,First inactivated seasonal influenza vaccination given by pharmacist
-1037371000000101,Second inactivated seasonal influenza vaccination given by pharmacist
-1066171000000108,Seasonal influenza vaccination given by midwife
-1066181000000105,First inactivated seasonal influenza vaccination given by midwife
-1066191000000107,Second inactivated seasonal influenza vaccination given by midwife
-1239861000000100,Seasonal influenza vaccination given in school
-884861000000100,Administration of first intranasal seasonal influenza vaccination
-884881000000109,Administration of second intranasal seasonal influenza vaccination
-945831000000105,First intramuscular seasonal influenza vaccination given by other healthcare provider
-955651000000100,Seasonal influenza vaccination given by other healthcare provider
-955661000000102,First intranasal seasonal influenza vaccination given by other healthcare provider
-955671000000109,Second intramuscular seasonal influenza vaccination given by other healthcare provider
-955681000000106,Second intranasal seasonal influenza vaccination given by other healthcare provider
-955691000000108,Seasonal influenza vaccination given by pharmacist
-955701000000108,Seasonal influenza vaccination given while hospital inpatient
-985151000000100,Administration of first inactivated seasonal influenza vaccination
-985171000000109,Administration of second inactivated seasonal influenza vaccination
+1325161000000102,Post-COVID-19 syndrome
+1325181000000106,Ongoing symptomatic disease caused by severe acute respiratory syndrome coronavirus 2
