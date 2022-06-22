@@ -1,142 +1,83 @@
-code,term
-1064811000000103,Moderate acute exacerbation of asthma
-1064821000000109,Life threatening acute exacerbation of asthma
-10674711000119105,Acute severe exacerbation of asthma co-occurrent with allergic rhinitis
-10674991000119104,Intermittent allergic asthma
-10675391000119101,Severe controlled persistent asthma
-10675431000119106,Severe persistent allergic asthma
-10675471000119109,Acute severe exacerbation of severe persistent allergic asthma
-10675551000119104,Acute severe exacerbation of severe persistent asthma co-occurrent with allergic rhinitis
-10675591000119109,Severe persistent allergic asthma controlled
-10675631000119109,Severe persistent asthma controlled co-occurrent with allergic rhinitis
-10675671000119107,Severe persistent allergic asthma uncontrolled
-10675711000119106,Severe persistent asthma uncontrolled co-occurrent with allergic rhinitis
-10675751000119107,Severe uncontrolled persistent asthma
-10675871000119106,Mild persistent allergic asthma
-10675911000119109,Acute severe exacerbation of mild persistent allergic asthma
-10675991000119100,Acute severe exacerbation of mild persistent allergic asthma co-occurrent with allergic rhinitis
-10676031000119106,Mild persistent allergic asthma controlled
-10676071000119109,Mild persistent asthma controlled
-10676111000119102,Mild persistent asthma controlled co-occurrent with allergic rhinitis
-10676151000119101,Mild persistent allergic asthma uncontrolled
-10676191000119106,Mild persistent asthma uncontrolled
-10676231000119102,Mild persistent asthma uncontrolled co-occurrent with allergic rhinitis
-10676351000119103,Moderate persistent asthma controlled
-10676391000119108,Moderate persistent allergic asthma
-10676431000119103,Acute severe exacerbation of moderate persistent allergic asthma
-10676511000119109,Acute severe exacerbation of moderate persistent asthma co-occurrent with allergic rhinitis
-10676551000119105,Moderate persistent allergic asthma controlled
-10676591000119100,Moderate persistent controlled asthma co-occurrent with allergic rhinitis
-10676631000119100,Moderate persistent allergic asthma uncontrolled
-10676671000119102,Moderate persistent asthma uncontrolled co-occurrent with allergic rhinitis
-10676711000119103,Moderate persistent asthma uncontrolled
-10692681000119108,Aspirin exacerbated respiratory disease
-10692721000119102,Chronic obstructive asthma co-occurrent with acute exacerbation of asthma
-10692761000119107,Asthma-chronic obstructive pulmonary disease overlap syndrome
-10742121000119104,Asthma in mother complicating childbirth
-1086701000000102,Life threatening acute exacerbation of allergic asthma
-1086711000000100,Life threatening acute exacerbation of intrinsic asthma
-1103911000000103,Severe asthma with fungal sensitisation
-11641008,Millers' asthma
-11944003,Feather-pickers' disease
-12428000,Intrinsic asthma without status asthmaticus
-124991000119109,Severe persistent asthma co-occurrent with allergic rhinitis
-125001000119103,Moderate persistent asthma co-occurrent with allergic rhinitis
-125011000119100,Mild persistent asthma co-occurrent with allergic rhinitis
-125021000119107,Intermittent asthma co-occurrent with allergic rhinitis
-13151001,Flax-dressers' disease
-135171000119106,Acute exacerbation of moderate persistent asthma
-135181000119109,Acute exacerbation of mild persistent asthma
-16584951000119101,Oral steroid-dependent asthma
-1741000119102,Intermittent asthma uncontrolled
-1751000119100,Acute exacerbation of chronic obstructive airways disease with asthma
-18041002,Printers' asthma
-195949008,Chronic asthmatic bronchitis
-195967001,Asthma
-195977004,Mixed asthma
-19849005,Meat-wrappers' asthma
-225057002,Brittle asthma
-233672007,Byssinosis grade 3
-233678006,Childhood asthma
-233679003,Late onset asthma
-233683003,Hay fever with asthma
-233687002,Colophony asthma
-233688007,Sulfite-induced asthma
-233691007,Asthmatic pulmonary eosinophilia
-2360001000004109,Steroid dependent asthma
-266361008,Non-allergic asthma
-281239006,Exacerbation of asthma
-30352005,Allergic-infective asthma
-304527002,Acute asthma
-312453004,Asthma - currently active
-31387002,Exercise-induced asthma
-34015007,Bakers' asthma
-370218001,Mild asthma
-370219009,Moderate asthma
-370220003,Occasional asthma
-370221004,Severe asthma
-389145006,Allergic asthma
-395022009,Asthma night-time symptoms
-401000119107,Asthma with irreversible airway obstruction
-401193004,Asthma confirmed
-404804003,Platinum asthma
-404806001,Cheese-makers' asthma
-404808000,Isocyanate induced asthma
-405944004,Asthmatic bronchitis
-407674008,Aspirin-induced asthma
-409663006,Cough variant asthma
-41553006,Detergent asthma
-418395004,Tea-makers' asthma
-423889005,Non-immunoglobulin E mediated allergic asthma
-424199006,Substance induced asthma
-424643009,Immunoglobulin E-mediated allergic asthma
-425969006,Exacerbation of intermittent asthma
-426656000,Severe persistent asthma
-426979002,Mild persistent asthma
-427295004,Moderate persistent asthma
-427603009,Intermittent asthma
-427679007,Mild intermittent asthma
-442025000,Acute exacerbation of chronic asthmatic bronchitis
-445427006,Seasonal asthma
-55570000,Asthma without status asthmaticus
-56968009,Asthma caused by wood dust
-57607007,Occupational asthma
-59786004,Weavers' cough
-63088003,Allergic asthma without status asthmaticus
-641000119106,Intermittent asthma well controlled
-703953004,Allergic asthma caused by Dermatophagoides pteronyssinus
-703954005,Allergic asthma caused by Dermatophagoides farinae
-707444001,Uncomplicated asthma
-707445000,Exacerbation of mild persistent asthma
-707446004,Exacerbation of moderate persistent asthma
-707447008,Exacerbation of severe persistent asthma
-707511009,Uncomplicated mild persistent asthma
-707512002,Uncomplicated moderate persistent asthma
-707513007,Uncomplicated severe persistent asthma
-707979007,Acute severe exacerbation of severe persistent asthma
-707980005,Acute severe exacerbation of moderate persistent asthma
-707981009,Acute severe exacerbation of mild persistent asthma
-708038006,Acute exacerbation of asthma
-708090002,Acute severe exacerbation of asthma
-708093000,Acute exacerbation of immunoglobulin E-mediated allergic asthma
-708094006,Acute exacerbation of intrinsic asthma
-708095007,Acute severe exacerbation of immunoglobin E-mediated allergic asthma
-708096008,Acute severe exacerbation of intrinsic asthma
-72301000119103,Asthma in pregnancy
-733858005,Acute severe refractory exacerbation of asthma
-734904007,Life threatening acute exacerbation of asthma
-734905008,Moderate acute exacerbation of asthma
-735587000,Acute severe exacerbation of asthma co-occurrent and due to allergic asthma
-735588005,Uncomplicated allergic asthma
-735589002,Uncomplicated non-allergic asthma
-762521001,Exacerbation of allergic asthma
-782513000,Acute severe exacerbation of allergic asthma
-782520007,Exacerbation of allergic asthma due to infection
-786836003,Near fatal asthma
-829976001,Thunderstorm asthma
-85761009,Byssinosis
-866881000000101,Chronic asthma with fixed airflow obstruction
-89099002,Chronic allergic bronchitis
-92807009,Chemical-induced asthma
-93432008,Drug-induced asthma
-99031000119107,Acute exacerbation of asthma co-occurrent with allergic rhinitis
+code,term,grouping_16_label,grouping_16_id,grouping_6_label,grouping_6_id
+110761000000106,English - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+494131000000105,White British - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+92391000000108,British or mixed British - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+92541000000108,Scottish - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+92551000000106,Welsh - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+92561000000109,Northern Irish - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+92571000000102,Cornish - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+93921000000101,Ulster Scots - ethnic grouping 2001 census,eth2001_whibrit,1,White,1
+494161000000100,White Irish - ethnic grouping 2001 census,eth2001_whiirish,2,White,1
+92401000000106,Irish - ethnic grouping 2001 census,eth2001_whiirish,2,White,1
+110401000000103,Turkish - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88911000000101,Irish Traveller - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88921000000107,Traveller - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88931000000109,Gypsy/Romany - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88941000000100,Polish - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88951000000102,Baltic States (Estonian or Latvian or Lithuanian) - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88961000000104,Commonwealth of (Russian) Independent States - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88971000000106,Albanian - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+88981000000108,Serbian - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+92411000000108,Other White background - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+92791000000109,Cypriot (part not stated) - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+93931000000104,Greek - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+93941000000108,Greek Cypriot - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+93951000000106,Turkish Cypriot - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+93961000000109,Italian - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+93981000000100,Kosovan - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+93991000000103,Bosnian - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+94001000000108,Croatian - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+94011000000105,Other republics which made up the former Yugoslavia - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+94021000000104,Mixed Irish and other White - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+94031000000102,Other mixed White - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+94041000000106,Other White European or European unspecified or Mixed European - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+94051000000109,Other White or White unspecified - ethnic grouping 2001 census,eth2001_whiother,3,White,1
+92421000000102,White and Black Caribbean - ethnic grouping 2001 census,eth2001_mxdwhiblkcar,4,Mixed,2
+92431000000100,White and Black African - ethnic grouping 2001 census,eth2001_mxdwhiblkafr,5,Mixed,2
+92441000000109,White and Asian - ethnic grouping 2001 census,eth2001_mxdwhiasn,6,Mixed,2
+110771000000104,Black and White - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92451000000107,Other Mixed background - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92581000000100,Black and Asian - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92591000000103,Black and Chinese - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92601000000109,Chinese and White - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92611000000106,Asian and Chinese - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92621000000100,Other Mixed or Mixed unspecified - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92631000000103,Mixed Asian - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+92721000000106,Mixed Black - ethnic grouping 2001 census,eth2001_mxdother,7,Mixed,2
+110751000000108,Indian or British Indian - ethnic grouping 2001 census,eth2001_asnindian,8,South Asian,3
+92461000000105,Pakistani or British Pakistani - ethnic grouping 2001 census,eth2001_asnpak,9,South Asian,3
+92471000000103,Bangladeshi or British Bangladeshi - ethnic grouping 2001 census,eth2001_asnbang,10,South Asian,3
+110781000000102,Sinhalese - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+86461000000107,Sri Lankan - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92481000000101,Other Asian background - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92641000000107,Punjabi - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92651000000105,Kashmiri - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92661000000108,East African Asian - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92671000000101,Tamil - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92681000000104,British Asian - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92691000000102,Caribbean Asian - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92701000000102,Other Asian or Asian unspecified - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92751000000101,Vietnamese - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92761000000103,Japanese - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92771000000105,Filipino - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+92781000000107,Malaysian - ethnic grouping 2001 census,eth2001_asnother,11,South Asian,3
+107691000000105,Caribbean - ethnic grouping 2001 census,eth2001_blkcarib,12,Black,4
+92491000000104,African - ethnic grouping 2001 census,eth2001_blkafric,13,Black,4
+92711000000100,Somali - ethnic grouping 2001 census,eth2001_blkafric,13,Black,4
+92731000000108,Nigerian - ethnic grouping 2001 census,eth2001_blkafric,13,Black,4
+110791000000100,Black British - ethnic grouping 2001 census,eth2001_blkoth,14,Black,4
+92501000000105,Other Black background - ethnic grouping 2001 census,eth2001_blkoth,14,Black,4
+92741000000104,Other Black or Black unspecified - ethnic grouping 2001 census,eth2001_blkoth,14,Black,4
+92511000000107,Chinese - ethnic grouping 2001 census,eth2001_chinese,15,Other,5
+89001000000105,Arab - ethnic grouping 2001 census,eth2001_other,16,Other,5
+89011000000107,Iranian - ethnic grouping 2001 census,eth2001_other,16,Other,5
+89021000000101,South and Central American - ethnic grouping 2001 census,eth2001_other,16,Other,5
+92521000000101,Other - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94061000000107,North African - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94071000000100,"Middle Eastern (excluding Israeli, Iranian and Arab) - ethnic grouping 2001 census",eth2001_other,16,Other,5
+94081000000103,Israeli - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94091000000101,Kurdish - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94101000000109,Moroccan - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94111000000106,Latin American - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94121000000100,Multi-ethnic islands: Mauritian or Seychellois or Maldivian or St Helena - ethnic grouping 2001 census,eth2001_other,16,Other,5
+94151000000105,Any other group - ethnic grouping 2001 census,eth2001_other,16,Other,5
