@@ -1,98 +1,107 @@
 code,term
-1091811000000102,Diastolic arterial pressure
-1105331000000106,Blood pressure measurement using oscillometric monitoring device with opportunistic atrial fibrillation detection
-12763006,Finding of decreased blood pressure
-12929001,Normal systolic arterial pressure
-163020007,On examination - blood pressure reading
-163022004,On examination - blood pressure reading very low
-163023009,On examination - blood pressure reading low
-163024003,On examination - blood pressure borderline low
-163025002,On examination - blood pressure reading normal
-163026001,On examination - blood pressure borderline raised
-163027005,On examination - blood pressure reading raised
-163028000,On examination - blood pressure reading very high
-163029008,On examination - blood pressure reading: postural drop
-163030003,On examination - Systolic blood pressure reading
-163031004,On examination - Diastolic blood pressure reading
-163032006,On examination - blood pressure stable
-163033001,Lying blood pressure
-163034007,Standing blood pressure
-163035008,Sitting blood pressure
-163036009,On examination - blood pressure decreased
-163037000,On examination - blood pressure labile
-170581003,On examination - initial high blood pressure
-170582005,On examination - check high blood pressure
-174255007,Non-invasive diastolic arterial pressure
-18050000,Increased systolic arterial pressure
-18352002,Abnormal systolic arterial pressure
-198081000000101,Ambulatory systolic blood pressure
-198091000000104,Ambulatory diastolic blood pressure
-2004005,Normal blood pressure
-23154005,Increased diastolic arterial pressure
-24184005,Finding of increased blood pressure
-251070002,Non-invasive systolic arterial pressure
-251074006,Non-invasive mean arterial pressure
-251076008,Non-invasive arterial pressure
-251078009,Post-vasodilatation arterial pressure
-26014004,Increased mean arterial pressure
-271649006,Systolic blood pressure
-271650006,Diastolic blood pressure
-271870002,Low blood pressure reading
-313005002,On examination - blood pressure reading: no postural drop
-314438006,Minimum systolic blood pressure
-314439003,Maximum systolic blood pressure
-314440001,Average systolic blood pressure
-314441002,Minimum day interval systolic blood pressure
-314442009,Minimum night interval systolic blood pressure
-314443004,Maximum night interval systolic blood pressure
-314444005,Maximum day interval systolic blood pressure
-314445006,Average night interval systolic blood pressure
-314446007,Average day interval systolic blood pressure
-314447003,Minimum 24 hour systolic blood pressure
-314448008,Maximum 24 hour systolic blood pressure
-314449000,Average 24 hour systolic blood pressure
-314451001,Minimum diastolic blood pressure
-314452008,Maximum diastolic blood pressure
-314453003,Average diastolic blood pressure
-314454009,Minimum day interval diastolic blood pressure
-314455005,Minimum night interval diastolic blood pressure
-314456006,Minimum 24 hour diastolic blood pressure
-314457002,Maximum night interval diastolic blood pressure
-314458007,Maximum day interval diastolic blood pressure
-314459004,Maximum 24 hour diastolic blood pressure
-314460009,Average night interval diastolic blood pressure
-314461008,Average day interval diastolic blood pressure
-314462001,Average 24 hour diastolic blood pressure
-314463006,24 hour blood pressure
-314464000,24 hour systolic blood pressure
-314465004,24 hour diastolic blood pressure
-335661000000109,Self measured blood pressure reading
-364090009,Systemic arterial pressure
-386534000,Arterial blood pressure
-386536003,Systemic blood pressure
-399304008,Systolic blood pressure on admission
-400974009,Standing systolic blood pressure
-400975005,Standing diastolic blood pressure
-407554009,Sitting systolic blood pressure
-407555005,Sitting diastolic blood pressure
-407556006,Lying systolic blood pressure
-407557002,Lying diastolic blood pressure
-413605002,Average home diastolic blood pressure
-413606001,Average home systolic blood pressure
-42689008,Decreased diastolic arterial pressure
-49844009,Abnormal diastolic arterial pressure
-53813002,Normal diastolic arterial pressure
-6797001,Mean blood pressure
-707303003,Post exercise systolic blood pressure response abnormal
-716579001,Baseline systolic blood pressure
-716632005,Baseline diastolic blood pressure
-72313002,Systolic arterial pressure
-723232008,Average blood pressure
-723235005,Maximum blood pressure
-723236006,Minimum blood pressure
-723237002,Non-invasive blood pressure
-75367002,Blood pressure
-81010002,Decreased systolic arterial pressure
-852291000000105,Maximum mean blood pressure
-852301000000109,Minimum mean blood pressure
-928021000000108,Baseline blood pressure
+10562009,Malignant hypertension complicating AND/OR reason for care during childbirth
+10725009,Benign hypertension
+10752641000119102,Eclampsia with pre-existing hypertension in childbirth
+10757401000119104,Pre-existing hypertensive heart and chronic kidney disease in mother complicating childbirth
+1078301000112109,Multiple drug intolerant hypertension
+111438007,Hypertension secondary to renal disease in obstetric context
+118781000119108,Pre-existing hypertensive chronic kidney disease in mother complicating pregnancy
+1201005,Benign essential hypertension
+123799005,Renovascular hypertension
+123800009,Goldblatt hypertension
+132721000119104,Hypertensive emergency
+140101000119109,Hypertension in chronic kidney disease stage 5 due to type 2 diabetes mellitus
+140111000119107,Hypertension in chronic kidney disease stage 4 due to type 2 diabetes mellitus
+140121000119100,Hypertension in chronic kidney disease stage 3 due to type 2 diabetes mellitus
+140131000119102,Hypertension in chronic kidney disease stage 2 due to type 2 diabetes mellitus
+14973001,Renal sclerosis with hypertension
+16229371000119106,Labile systemic arterial hypertension
+169465000,Hypertension caused by oral contraceptive pill
+18416000,Essential hypertension complicating AND/OR reason for care during childbirth
+194783001,Secondary malignant renovascular hypertension
+194785008,Secondary benign hypertension
+194788005,Hypertension secondary to endocrine disorder
+194791005,Hypertension caused by drug
+19769006,High-renin essential hypertension
+198942000,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium"
+198944004,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - delivered"
+198945003,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - delivered with postnatal complication"
+198946002,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - not delivered"
+198947006,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium with postnatal complication"
+198949009,"Renal hypertension complicating pregnancy, childbirth and the puerperium"
+198951008,"Renal hypertension complicating pregnancy, childbirth and the puerperium - delivered"
+198952001,"Renal hypertension complicating pregnancy, childbirth and the puerperium - delivered with postnatal complication"
+198953006,"Renal hypertension complicating pregnancy, childbirth and the puerperium - not delivered"
+198954000,"Renal hypertension complicating pregnancy, childbirth and the puerperium with postnatal complication"
+198997005,Pre-eclampsia or eclampsia with pre-existing hypertension
+198999008,Pre-eclampsia or eclampsia with pre-existing hypertension - delivered
+199000005,Pre-eclampsia or eclampsia with pre-existing hypertension - delivered with postnatal complication
+199002002,Pre-eclampsia or eclampsia with pre-existing hypertension - not delivered
+199003007,Pre-eclampsia or eclampsia with pre-existing hypertension with postnatal complication
+199005000,"Pre-existing hypertension complicating pregnancy, childbirth and puerperium"
+199007008,"Pre-existing hypertensive heart and renal disease complicating pregnancy, childbirth and the puerperium"
+199008003,"Pre-existing secondary hypertension complicating pregnancy, childbirth and puerperium"
+23717007,Benign essential hypertension complicating AND/OR reason for care during pregnancy
+23786008,Malignant hypertension complicating AND/OR reason for care during puerperium
+24042004,Chronic hypertension complicating AND/OR reason for care during puerperium
+26078007,Hypertension secondary to renal disease complicating AND/OR reason for care during childbirth
+28119000,Renal hypertension
+29259002,Malignant hypertension complicating AND/OR reason for care during pregnancy
+31407004,Pre-existing hypertension complicating AND/OR reason for care during puerperium
+31992008,Secondary hypertension
+34694006,Pre-existing hypertension complicating AND/OR reason for care during childbirth
+35303009,Benign essential hypertension complicating AND/OR reason for care during puerperium
+371125006,Labile essential hypertension
+37618003,Chronic hypertension complicating AND/OR reason for care during pregnancy
+38341003,"Hypertensive disorder, systemic arterial"
+39018007,Renal arterial hypertension
+39727004,Hypertension secondary to renal disease complicating AND/OR reason for care during puerperium
+397748008,Hypertension with albuminuria
+40511000119107,Postpartum pre-existing essential hypertension
+427889009,Hypertension associated with transplantation
+428575007,Hypertension secondary to kidney transplant
+429457004,Systolic essential hypertension
+443482000,Hypertensive urgency
+46481004,Low-renin essential hypertension
+471521000000108,[X]Hypertensive diseases
+48146000,Diastolic hypertension
+48552006,Hypertension secondary to renal disease complicating AND/OR reason for care during pregnancy
+56218007,Systolic hypertension
+57684003,Parenchymal renal hypertension
+59621000,Essential hypertension
+59720008,Sustained diastolic hypertension
+59997006,Endocrine hypertension
+63287004,Benign essential hypertension in obstetric context
+65402008,Pre-existing hypertension complicating AND/OR reason for care during pregnancy
+65518004,Labile diastolic hypertension
+67359005,Pre-eclampsia added to pre-existing hypertension
+69909000,Eclampsia added to pre-existing hypertension
+70272006,Malignant hypertension
+706882009,Hypertensive crisis
+712832005,Supine hypertension
+71421000119105,Hypertension in chronic kidney disease due to type 2 diabetes mellitus
+71701000119105,Hypertension in chronic kidney disease due to type 1 diabetes mellitus
+71874008,Benign essential hypertension complicating AND/OR reason for care during childbirth
+72022006,Essential hypertension in obstetric context
+720568003,Brachydactyly and arterial hypertension syndrome
+73410007,Benign secondary renovascular hypertension
+74451002,Secondary diastolic hypertension
+762463000,Diastolic hypertension co-occurrent with systolic hypertension
+766937004,Hypertension due to gain-of-function mutation in mineralocorticoid receptor
+78808002,Essential hypertension complicating AND/OR reason for care during pregnancy
+78975002,Malignant essential hypertension
+81626002,Malignant hypertension in obstetric context
+8218002,Chronic hypertension complicating AND/OR reason for care during childbirth
+84094009,Rebound hypertension
+843821000000102,Stage 1 hypertension (National Institute for Health and Clinical Excellence 2011)
+843841000000109,Severe hypertension (National Institute for Health and Clinical Excellence 2011)
+845891000000103,Hypertension resistant to drug therapy
+846371000000103,Stage 2 hypertension (National Institute for Health and Clinical Excellence 2011)
+86041002,Pre-existing hypertension in obstetric context
+863191000000102,Nocturnal hypertension
+871642009,Hypertension due to aortic arch obstruction
+8762007,Chronic hypertension in obstetric context
+89242004,Malignant secondary hypertension
+908631000000108,Stage 1 hypertension (National Institute for Health and Clinical Excellence 2011) without evidence of end organ damage
+908651000000101,Stage 1 hypertension (National Institute for Health and Clinical Excellence 2011) with evidence of end organ damage
+9901000,Essential hypertension complicating AND/OR reason for care during puerperium
