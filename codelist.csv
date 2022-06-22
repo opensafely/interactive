@@ -1,19 +1,17 @@
 code,term
-14336007,Ruptured abdominal aortic aneurysm
-195265003,"Thoracoabdominal aortic aneurysm, ruptured"
-195268001,Leaking abdominal aortic aneurysm
-233984007,Thoracoabdominal aortic aneurysm
-233985008,Abdominal aortic aneurysm
-314184006,Ruptured suprarenal aortic aneurysm
-314185007,Juxtarenal aortic aneurysm
-314186008,Inflammatory abdominal aortic aneurysm
-315295003,Recurrent abdominal aortic aneurysm
-425771001,Enlarging abdominal aortic aneurysm
-426270006,Aneurysm of suprarenal aorta
-444569004,Aneurysm of infrarenal abdominal aorta
-715364001,Familial abdominal aortic aneurysm
-735576008,Perforation of abdominal aorta co-occurrent and due to aneurysm of abdominal aorta
-735577004,Perforation of thoracoabdominal aorta co-occurrent and due to aneurysm of thoracoabdominal aorta
-75878002,Abdominal aortic aneurysm without rupture
-771453009,Repair of abdominal aortic aneurysm with insertion of stent
-871536000,Aneurysm of pararenal aorta
+1079381000000109,Medication review by community nurse
+1127441000000107,Medication review done by clinical pharmacist
+1239511000000100,Structured medication review
+182836005,Review of medication
+314530002,Medication review done
+391156007,Medication review without patient
+719326006,Medication review done by pharmacy technician
+719327002,Medication review done by community pharmacist
+719328007,Medication review done by doctor
+719329004,Medication review done by pharmacist
+719478008,Medication review done by nurse
+803361000000109,Medication review by practice nurse
+870661000000100,Polypharmacy medication review
+88551000000109,Medication review with patient
+961831000000100,Medication review done by medicines management pharmacist
+961861000000105,Medication review done by medicines management technician
