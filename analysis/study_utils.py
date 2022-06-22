@@ -1,62 +1,5 @@
-from datetime import date, datetime
 import numpy as np
-from dateutil import relativedelta
-from cohortextractor import (
-    StudyDefinition,
-    codelist,
-    patients,
-)
-
-from variables import study_start_date, study_end_date
-
-
-def build_study_definition_for_counts(codelist):
-    start_date = datetime.strptime(study_start_date, "%Y-%m-%d").date()
-    end_date = datetime.strptime(study_end_date, "%Y-%m-%d").date()
-
-    return StudyDefinition(
-        default_expectations={
-            "date": {"earliest": study_start_date, "latest": study_end_date},
-            "rate": "uniform",
-            "incidence": 0.5,
-        },
-        index_date=study_start_date,
-        population=patients.satisfying(
-            "currently_registered OR has_died",
-            currently_registered=patients.registered_as_of(study_end_date),
-            has_died=patients.with_death_recorded_in_primary_care(
-                between=[study_start_date, study_end_date], returning="binary_flag"
-            ),
-        ),
-        **calculate_code_frequency(start_date, end_date, codelist),
-    )
-
-
-def calculate_code_frequency(start_date, end_date, selected_codes):
-    start_date_formatted = date.strftime(start_date, "%Y-%m-%d")
-    end_date_formatted = date.strftime(end_date, "%Y-%m-%d")
-
-    variables = {}
-    for code in selected_codes:
-        variables[f"code_{code}"] = patients.with_these_clinical_events(
-            codelist([code], system="snomed"),
-            between=[start_date_formatted, end_date_formatted],
-            episode_defined_as="series of events each <= 0 days apart",
-            returning="number_of_episodes",
-            return_expectations={
-                "incidence": 0.1,
-                "int": {"distribution": "normal", "mean": 3, "stddev": 1},
-            },
-        )
-    return variables
-
-
-def last_day_of_month(dt):
-    return dt + relativedelta.relativedelta(day=31)
-
-
-def last_day_of_week(dt):
-    return dt + relativedelta.relativedelta(day=7)
+import pandas as pd
 
 
 def group_low_values(df, count_column, code_column, threshold):
@@ -74,28 +17,34 @@ def group_low_values(df, count_column, code_column, threshold):
 
     # get sum of any values <= threshold
     suppressed_count = df.loc[df[count_column] <= threshold, count_column].sum()
+    suppressed_df = df.loc[df[count_column] > threshold, count_column]
 
-    # if no values are suppressed we don't need to do anything
-    if suppressed_count == 0:
-        pass
+    # if suppressed values >0 ensure total suppressed count > threshold.
+    # Also suppress if all values 0
+    if (suppressed_count > 0) | (
+        (suppressed_count == 0) & (len(suppressed_df) != len(df))
+    ):
 
-    # if suppressed values >0 ensure total suppressed count > threshold
-    else:
         # redact counts <= threshold
         df.loc[df[count_column] <= threshold, count_column] = np.nan
 
-        # if suppressed count <= threshold redact further values
-        while suppressed_count <= threshold:
-            suppressed_count += df[count_column].min()
-            df.loc[df[count_column].idxmin(), :] = np.nan
+        # If all values 0, suppress them
+        if suppressed_count == 0:
+            df.loc[df[count_column] == 0, :] = np.nan
+
+        else:
+            # if suppressed count <= threshold redact further values
+            while suppressed_count <= threshold:
+                suppressed_count += df[count_column].min()
+                df.loc[df[count_column].idxmin(), :] = np.nan
 
         # drop all rows where count column is null
         df = df.loc[df[count_column].notnull(), :]
 
         # add suppressed count as "Other" row (if > threshold)
         if suppressed_count > threshold:
-            suppressed_count = {code_column: "Other", count_column: suppressed_count}
-            df = df.append(suppressed_count, ignore_index=True)
+            suppressed_count = {"code": "Other", count_column: suppressed_count}
+            df = pd.concat([df, pd.DataFrame([suppressed_count])], ignore_index=True)
 
     return df
 
@@ -184,10 +133,12 @@ def calculate_rate(df, value_col, rate_per=1000, round_rate=False):
 
 
 def round_values(x, base=5):
-    if x is not None and not str(x).startswith("<=") and not np.isnan(x):
-        rounded = int(base * round(x / base))
-    else:
-        rounded = np.nan
+    rounded = x
+    if isinstance(x, (int, float)):
+        if np.isnan(x):
+            rounded = np.nan
+        else:
+            rounded = int(base * round(x / base))
     return rounded
 
 
@@ -216,7 +167,9 @@ def convert_weekly_to_monthly(counts_table):
     num_dates_over = num_dates % 4
     if num_dates_over != 0:
         # drop rows from counts table
-        counts_table = counts_table.loc[~counts_table["date"].isin(dates[0:num_dates_over]), counts_table.columns]
+        counts_table = counts_table.loc[
+            ~counts_table["date"].isin(dates[0:num_dates_over]), counts_table.columns
+        ]
 
         # drop dates from dates list
         dates = dates[num_dates_over:]
@@ -227,7 +180,9 @@ def convert_weekly_to_monthly(counts_table):
         date_group = dates[i : i + 4]
         for date in date_group:
             dates_map[date] = date_group[0]
-    counts_table.loc[counts_table.index,"date"] = counts_table.loc[counts_table.index,"date"].map(dates_map)
+    counts_table.loc[counts_table.index, "date"] = counts_table.loc[
+        counts_table.index, "date"
+    ].map(dates_map)
 
     # group into 4 weeks
     counts_table = (

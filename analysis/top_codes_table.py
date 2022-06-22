@@ -1,14 +1,6 @@
-import sys
-
 import pandas as pd
 from study_utils import create_top_5_code_table
-from variables import low_count_threshold, rounding_base
-
-
-if len(sys.argv) > 1:
-    output_dir = sys.argv[1]
-else:
-    output_dir = "output"
+from variables import low_count_threshold, output_dir, rounding_base
 
 
 def main():

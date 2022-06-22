@@ -1,19 +1,17 @@
-import sys
-
-import pandas as pd
 import numpy as np
+import pandas as pd
 from study_utils import (
     calculate_rate,
-    redact_events_table,
     convert_weekly_to_monthly,
+    redact_events_table,
     round_values,
 )
-from variables import low_count_threshold, rounding_base, rounding_base_practice_count
-
-if len(sys.argv) > 1:
-    output_dir = sys.argv[1]
-else:
-    output_dir = "output"
+from variables import (
+    low_count_threshold,
+    output_dir,
+    rounding_base,
+    rounding_base_practice_count,
+)
 
 
 def practice_counts(counts_table, list_sizes):
