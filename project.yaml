@@ -6,59 +6,59 @@ expectations:
 
 actions:
 
-  codelist_report_02qJUbBdBYHqBiUMSs0bxq:
+  codelist_report_02qKc8bQrUSUFt16VbBrWl:
     run: >
       cohortextractor:latest generate_codelist_report
         --codelist-path=codelist.csv
         --start-date=2019-09-01
         --end-date=2022-06-29
-        --output-dir output/02qJUbBdBYHqBiUMSs0bxq
+        --output-dir output/02qKc8bQrUSUFt16VbBrWl
     outputs:
       moderately_sensitive:
-        table: output/02qJUbBdBYHqBiUMSs0bxq/counts_per_*.csv
-        list_sizes: output/02qJUbBdBYHqBiUMSs0bxq/list_sizes.csv
-        patient_count_table: output/02qJUbBdBYHqBiUMSs0bxq/patient_count.csv
+        table: output/02qKc8bQrUSUFt16VbBrWl/counts_per_*.csv
+        list_sizes: output/02qKc8bQrUSUFt16VbBrWl/list_sizes.csv
+        patient_count_table: output/02qKc8bQrUSUFt16VbBrWl/patient_count.csv
 
-  measures_02qJUbBdBYHqBiUMSs0bxq:
+  measures_02qKc8bQrUSUFt16VbBrWl:
     run: >
       python:latest python analysis/generate_measures.py
         --start-date=2019-09-01
         --end-date=2022-06-29
-        --output-dir output/02qJUbBdBYHqBiUMSs0bxq
+        --output-dir output/02qKc8bQrUSUFt16VbBrWl
         --low-count-threshold 100
         --rounding-base 10
-    needs: [codelist_report_02qJUbBdBYHqBiUMSs0bxq]
+    needs: [codelist_report_02qKc8bQrUSUFt16VbBrWl]
     outputs:
       moderately_sensitive:
-        measure: output/02qJUbBdBYHqBiUMSs0bxq/measure_counts_per_week_per_practice.csv
-        events_count_table: output/02qJUbBdBYHqBiUMSs0bxq/for_release/event_counts.csv
-        practice_count_table: output/02qJUbBdBYHqBiUMSs0bxq/for_release/practice_count.csv
+        measure: output/02qKc8bQrUSUFt16VbBrWl/measure_counts_per_week_per_practice.csv
+        events_count_table: output/02qKc8bQrUSUFt16VbBrWl/for_release/event_counts.csv
+        practice_count_table: output/02qKc8bQrUSUFt16VbBrWl/for_release/practice_count.csv
 
-  top_5_table_02qJUbBdBYHqBiUMSs0bxq:
+  top_5_table_02qKc8bQrUSUFt16VbBrWl:
     run: >
       python:latest python analysis/top_codes_table.py
         --start-date=2019-09-01
         --end-date=2022-06-29
-        --output-dir output/02qJUbBdBYHqBiUMSs0bxq
+        --output-dir output/02qKc8bQrUSUFt16VbBrWl
         --low-count-threshold 100
         --rounding-base 10
-    needs: [codelist_report_02qJUbBdBYHqBiUMSs0bxq]
+    needs: [codelist_report_02qKc8bQrUSUFt16VbBrWl]
     outputs:
       moderately_sensitive:
-        table: output/02qJUbBdBYHqBiUMSs0bxq/for_release/top_5_code_table.csv
+        table: output/02qKc8bQrUSUFt16VbBrWl/for_release/top_5_code_table.csv
 
-  deciles_charts_02qJUbBdBYHqBiUMSs0bxq:
+  deciles_charts_02qKc8bQrUSUFt16VbBrWl:
     run: >
       deciles-charts:v0.0.24
-        --input-files output/02qJUbBdBYHqBiUMSs0bxq/measure_counts_per_week_per_practice.csv
-        --output-dir output/02qJUbBdBYHqBiUMSs0bxq/for_release
+        --input-files output/02qKc8bQrUSUFt16VbBrWl/measure_counts_per_week_per_practice.csv
+        --output-dir output/02qKc8bQrUSUFt16VbBrWl/for_release
     config:
       show_outer_percentiles: false
       tables:
         output: false
       charts:
         output: true
-    needs: [measures_02qJUbBdBYHqBiUMSs0bxq]
+    needs: [measures_02qKc8bQrUSUFt16VbBrWl]
     outputs:
       moderately_sensitive:
-        deciles_charts: output/02qJUbBdBYHqBiUMSs0bxq/for_release/deciles_*.*
+        deciles_charts: output/02qKc8bQrUSUFt16VbBrWl/for_release/deciles_*.*
