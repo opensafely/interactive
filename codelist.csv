@@ -1,155 +1,107 @@
 code,term
-101421000119107,Dementia due to Parkinson's disease
-10349009,Multi-infarct dementia with delirium
-10532003,"Primary degenerative dementia of the Alzheimer type, presenile onset, with depression"
-105421000119105,Early onset Alzheimer's disease with behavioral disturbance
-106021000119105,Multi-infarct dementia due to atherosclerosis
-1089501000000102,Presenile dementia with psychosis
-1089521000000106,Predominantly cortical dementia
-1089531000000108,Predominantly cortical vascular dementia
-111480006,Psychoactive substance-induced organic dementia
-12348006,Presenile dementia
-130121000119104,Dementia due to Rett's syndrome
-13092008,Pick's disease
-135811000119107,Lewy body dementia with behavioral disturbance
-14070001,Multi-infarct dementia with depression
-141991000119109,Delusions in Alzheimer's disease
-142001000119106,Depressed mood in Alzheimer's disease
-142011000119109,Alzheimer's disease co-occurrent with delirium
-15662003,Senile dementia
-1581000119101,Dementia of the Alzheimer type with behavioral disturbance
-1591000119103,Dementia with behavioral disturbance
-16276361000119109,Vascular dementia without behavioral disturbance
-191449005,Uncomplicated senile dementia
-191451009,Uncomplicated presenile dementia
-191452002,Presenile dementia with delirium
-191454001,Presenile dementia with paranoia
-191455000,Presenile dementia with depression
-191457008,Senile dementia with depressive or paranoid features
-191458003,Senile dementia with paranoia
-191459006,Senile dementia with depression
-191461002,Senile dementia with delirium
-191463004,Uncomplicated arteriosclerotic dementia
-191464005,Arteriosclerotic dementia with delirium
-191465006,Arteriosclerotic dementia with paranoia
-191466007,Arteriosclerotic dementia with depression
-191493005,Drug-induced dementia
-191519005,Dementia associated with another disease
-20484008,Prion disease
-21921000119103,Dementia co-occurrent and due to Pick's disease
-22381000119105,Primary degenerative dementia
-230265002,Familial Alzheimer's disease of early onset
-230266001,Non-familial Alzheimer's disease of early onset
-230267005,Familial Alzheimer's disease of late onset
-230268000,Non-familial Alzheimer's disease of late onset
-230269008,Focal Alzheimer's disease
-230270009,Frontotemporal dementia
-230271008,Pick's disease with Pick bodies
-230272001,Pick's disease with Pick cells and no Pick bodies
-230273006,Frontotemporal degeneration
-230274000,Frontal lobe degeneration with motor neurone disease
-230280008,Progressive aphasia in Alzheimer's disease
-230281007,Argyrophilic grain disease
-230282000,Post-traumatic dementia
-230283005,Punch drunk syndrome
-230284004,Spongiform encephalopathy
-230285003,Vascular dementia of acute onset
-230286002,Subcortical vascular dementia
-230287006,Mixed cortical and subcortical vascular dementia
-230288001,Semantic dementia
-230289009,Patchy dementia
-25772007,Multi-infarct dementia with delusions
-26852004,"Primary degenerative dementia of the Alzheimer type, senile onset, with depression"
-26929004,Alzheimer's disease
-278855005,Frontal lobe degeneration
-278857002,Dementia of frontal lobe type
-279982005,Cerebral degeneration presenting primarily with dementia
-281004,Dementia associated with alcoholism
-288631000119104,Vascular dementia with behavioral disturbance
-304603007,Variant Creutzfeldt-Jakob disease
-31081000119101,Presenile dementia with delusions
-312991009,Senile dementia of the Lewy body type
-32875003,Inhalant-induced persisting dementia
-371024007,Senile dementia with delusion
-371026009,Senile dementia with psychosis
-416780008,"Primary degenerative dementia of the Alzheimer type, presenile onset"
-416975007,"Primary degenerative dementia of the Alzheimer type, senile onset"
-419261000000107,"[X]Dementia in Alzheimer's dis, atypical or mixed type"
-420614009,Organic dementia associated with acquired immunodeficiency syndrome
-421023003,Presenile dementia associated with acquired immunodeficiency syndrome
-421529006,Dementia associated with acquired immunodeficiency syndrome
-425390006,Dementia associated with Parkinson's Disease
-42769004,Diffuse Lewy body disease with spongiform cortical change
-429458009,Dementia due to Creutzfeldt Jakob disease
-429998004,Vascular dementia
-442344002,Dementia due to Huntington chorea
-45864009,Senile degeneration of brain
-4817008,"Primary degenerative dementia of the Alzheimer type, senile onset, with delirium"
-51928006,General paresis - neurosyphilis
-52448006,Dementia
-54502004,"Primary degenerative dementia of the Alzheimer type, presenile onset, with delusions"
-55009008,"Primary degenerative dementia of the Alzheimer type, senile onset, with delusions"
-56267009,Multi-infarct dementia
-59651006,"Sedative, hypnotic AND/OR anxiolytic-induced persisting dementia"
-62239001,Parkinson-dementia complex of Guam
-6475002,"Primary degenerative dementia of the Alzheimer type, presenile onset, uncomplicated"
-65096006,"Primary degenerative dementia of the Alzheimer type, presenile onset, with delirium"
-66108005,"Primary degenerative dementia of the Alzheimer type, senile onset, uncomplicated"
-67155006,Gerstmann-Straussler-Scheinker syndrome
-698624003,Dementia associated with cerebral lipidosis
-698625002,Dementia associated with normal pressure hydrocephalus
-698626001,Dementia associated with multiple sclerosis
-698687007,Post-traumatic dementia with behavioral change
-698725008,Dementia associated with neurosyphilis
-698726009,Dementia associated with viral encephalitis
-698781002,Dementia associated with cerebral anoxia
-698948009,Vascular dementia in remission
-698949001,Dementia in remission
-698954005,"Primary degenerative dementia of the Alzheimer type, senile onset in remission"
-698955006,"Primary degenerative dementia of the Alzheimer type, presenile onset in remission"
-70936005,"Multi-infarct dementia, uncomplicated"
-713060000,Sporadic Creutzfeldt-Jakob disease
-713488003,Presenile dementia co-occurrent with human immunodeficiency virus infection
-713844000,Dementia co-occurrent with human immunodeficiency virus infection
-722600006,Non-amnestic Alzheimer disease
-722977005,Dementia co-occurrent and due to neurocysticercosis
-722978000,Dementia caused by toxin
-722979008,Dementia due to metabolic abnormality
-722980006,Dementia due to chromosomal anomaly
-723123001,Ischemic vascular dementia
-723390000,Rapidly progressive dementia
-724776007,Dementia due to disorder of central nervous system
-724777003,Dementia due to infectious disease
-733184002,Dementia caused by heavy metal exposure
-733185001,Dementia following injury caused by exposure to ionizing radiation
-733190003,Dementia due to primary malignant neoplasm of brain
-733191004,Dementia due to chronic subdural hematoma
-733192006,Dementia due to herpes encephalitis
-733193001,Dementia co-occurrent and due to progressive multifocal leukoencephalopathy
-733194007,Dementia co-occurrent and due to Down syndrome
-762350007,Dementia due to prion disease
-762351006,Dementia due to and following injury of head
-762707000,Subcortical dementia
-783161005,Familial dementia British type
-783258000,Familial dementia Danish type
-788898005,Dementia caused by volatile inhalant
-788899002,Dementia due to pellagra
-792004,Jakob-Creutzfeldt disease
-79341000119107,Mixed dementia
-80098002,Diffuse Lewy body disease
-82351000119105,Altered behavior co-occurrent and due to Pick's disease
-82361000119107,Altered behavior in dementia due to Huntington chorea
-82371000119101,Dementia due to multiple sclerosis with altered behavior
-82381000119103,Epileptic dementia with behavioral disturbance
-82959004,Dementia paralytica juvenilis
-83157008,Fatal familial insomnia
-833326008,Cortical vascular dementia
-838276009,"Amyotrophic lateral sclerosis, parkinsonism, dementia complex"
-840452004,Classical sporadic Creutzfeldt-Jakob disease
-840464007,Dementia due to carbon monoxide poisoning
-840465008,Dementia due to iron deficiency
-860826006,Creutzfeldt-Jakob Disease caused by human growth hormone
-86188000,Kuru
-90099008,Subcortical leukoencephalopathy
-9345005,Dialysis dementia
-97751000119108,Altered behavior in Alzheimer's disease
+10562009,Malignant hypertension complicating AND/OR reason for care during childbirth
+10725009,Benign hypertension
+10752641000119102,Eclampsia with pre-existing hypertension in childbirth
+10757401000119104,Pre-existing hypertensive heart and chronic kidney disease in mother complicating childbirth
+1078301000112109,Multiple drug intolerant hypertension
+111438007,Hypertension secondary to renal disease in obstetric context
+118781000119108,Pre-existing hypertensive chronic kidney disease in mother complicating pregnancy
+1201005,Benign essential hypertension
+123799005,Renovascular hypertension
+123800009,Goldblatt hypertension
+132721000119104,Hypertensive emergency
+140101000119109,Hypertension in chronic kidney disease stage 5 due to type 2 diabetes mellitus
+140111000119107,Hypertension in chronic kidney disease stage 4 due to type 2 diabetes mellitus
+140121000119100,Hypertension in chronic kidney disease stage 3 due to type 2 diabetes mellitus
+140131000119102,Hypertension in chronic kidney disease stage 2 due to type 2 diabetes mellitus
+14973001,Renal sclerosis with hypertension
+16229371000119106,Labile systemic arterial hypertension
+169465000,Hypertension caused by oral contraceptive pill
+18416000,Essential hypertension complicating AND/OR reason for care during childbirth
+194783001,Secondary malignant renovascular hypertension
+194785008,Secondary benign hypertension
+194788005,Hypertension secondary to endocrine disorder
+194791005,Hypertension caused by drug
+19769006,High-renin essential hypertension
+198942000,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium"
+198944004,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - delivered"
+198945003,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - delivered with postnatal complication"
+198946002,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium - not delivered"
+198947006,"Benign essential hypertension complicating pregnancy, childbirth and the puerperium with postnatal complication"
+198949009,"Renal hypertension complicating pregnancy, childbirth and the puerperium"
+198951008,"Renal hypertension complicating pregnancy, childbirth and the puerperium - delivered"
+198952001,"Renal hypertension complicating pregnancy, childbirth and the puerperium - delivered with postnatal complication"
+198953006,"Renal hypertension complicating pregnancy, childbirth and the puerperium - not delivered"
+198954000,"Renal hypertension complicating pregnancy, childbirth and the puerperium with postnatal complication"
+198997005,Pre-eclampsia or eclampsia with pre-existing hypertension
+198999008,Pre-eclampsia or eclampsia with pre-existing hypertension - delivered
+199000005,Pre-eclampsia or eclampsia with pre-existing hypertension - delivered with postnatal complication
+199002002,Pre-eclampsia or eclampsia with pre-existing hypertension - not delivered
+199003007,Pre-eclampsia or eclampsia with pre-existing hypertension with postnatal complication
+199005000,"Pre-existing hypertension complicating pregnancy, childbirth and puerperium"
+199007008,"Pre-existing hypertensive heart and renal disease complicating pregnancy, childbirth and the puerperium"
+199008003,"Pre-existing secondary hypertension complicating pregnancy, childbirth and puerperium"
+23717007,Benign essential hypertension complicating AND/OR reason for care during pregnancy
+23786008,Malignant hypertension complicating AND/OR reason for care during puerperium
+24042004,Chronic hypertension complicating AND/OR reason for care during puerperium
+26078007,Hypertension secondary to renal disease complicating AND/OR reason for care during childbirth
+28119000,Renal hypertension
+29259002,Malignant hypertension complicating AND/OR reason for care during pregnancy
+31407004,Pre-existing hypertension complicating AND/OR reason for care during puerperium
+31992008,Secondary hypertension
+34694006,Pre-existing hypertension complicating AND/OR reason for care during childbirth
+35303009,Benign essential hypertension complicating AND/OR reason for care during puerperium
+371125006,Labile essential hypertension
+37618003,Chronic hypertension complicating AND/OR reason for care during pregnancy
+38341003,"Hypertensive disorder, systemic arterial"
+39018007,Renal arterial hypertension
+39727004,Hypertension secondary to renal disease complicating AND/OR reason for care during puerperium
+397748008,Hypertension with albuminuria
+40511000119107,Postpartum pre-existing essential hypertension
+427889009,Hypertension associated with transplantation
+428575007,Hypertension secondary to kidney transplant
+429457004,Systolic essential hypertension
+443482000,Hypertensive urgency
+46481004,Low-renin essential hypertension
+471521000000108,[X]Hypertensive diseases
+48146000,Diastolic hypertension
+48552006,Hypertension secondary to renal disease complicating AND/OR reason for care during pregnancy
+56218007,Systolic hypertension
+57684003,Parenchymal renal hypertension
+59621000,Essential hypertension
+59720008,Sustained diastolic hypertension
+59997006,Endocrine hypertension
+63287004,Benign essential hypertension in obstetric context
+65402008,Pre-existing hypertension complicating AND/OR reason for care during pregnancy
+65518004,Labile diastolic hypertension
+67359005,Pre-eclampsia added to pre-existing hypertension
+69909000,Eclampsia added to pre-existing hypertension
+70272006,Malignant hypertension
+706882009,Hypertensive crisis
+712832005,Supine hypertension
+71421000119105,Hypertension in chronic kidney disease due to type 2 diabetes mellitus
+71701000119105,Hypertension in chronic kidney disease due to type 1 diabetes mellitus
+71874008,Benign essential hypertension complicating AND/OR reason for care during childbirth
+72022006,Essential hypertension in obstetric context
+720568003,Brachydactyly and arterial hypertension syndrome
+73410007,Benign secondary renovascular hypertension
+74451002,Secondary diastolic hypertension
+762463000,Diastolic hypertension co-occurrent with systolic hypertension
+766937004,Hypertension due to gain-of-function mutation in mineralocorticoid receptor
+78808002,Essential hypertension complicating AND/OR reason for care during pregnancy
+78975002,Malignant essential hypertension
+81626002,Malignant hypertension in obstetric context
+8218002,Chronic hypertension complicating AND/OR reason for care during childbirth
+84094009,Rebound hypertension
+843821000000102,Stage 1 hypertension (National Institute for Health and Clinical Excellence 2011)
+843841000000109,Severe hypertension (National Institute for Health and Clinical Excellence 2011)
+845891000000103,Hypertension resistant to drug therapy
+846371000000103,Stage 2 hypertension (National Institute for Health and Clinical Excellence 2011)
+86041002,Pre-existing hypertension in obstetric context
+863191000000102,Nocturnal hypertension
+871642009,Hypertension due to aortic arch obstruction
+8762007,Chronic hypertension in obstetric context
+89242004,Malignant secondary hypertension
+908631000000108,Stage 1 hypertension (National Institute for Health and Clinical Excellence 2011) without evidence of end organ damage
+908651000000101,Stage 1 hypertension (National Institute for Health and Clinical Excellence 2011) with evidence of end organ damage
+9901000,Essential hypertension complicating AND/OR reason for care during puerperium
